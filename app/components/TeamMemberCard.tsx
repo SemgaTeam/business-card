@@ -21,8 +21,22 @@ export default function TeamMemberCard({
 	borderColor
 }: TeamMemberProps) {
 	return (
-		<Card className={`border-2 ${borderColor} p-6 flex flex-col md:flex-row gap-6`}>
-			<div className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden flex-shrink-0">
+
+		<Card className={`border-2 ${borderColor} p-6 flex flex-col relative md:flex-row gap-6`}	
+			style={{
+			backgroundImage: `url(${avatar})`,
+			backgroundSize: 'cover',
+			backgroundPosition: 'center',
+		}}>
+			  <div 
+				className="absolute inset-0"
+				style={{
+				backdropFilter: 'blur(8px)',
+				backgroundColor: 'rgba(0,0,0,0.5)',
+				}}
+			/>
+
+			<div className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden flex-shrink-0 relative z-10">
 				<Image src={avatar}
 					width={200}
 					height={200}
@@ -30,7 +44,7 @@ export default function TeamMemberCard({
 					className="w-full h-full object-cover">
 					</Image>
 			</div>
-			<CardContent className="space-y-4">
+			<CardContent className="space-y-4 relative z-10">
 				<h3 className="text-xl md:text-2xl font-boldmt-4">
           			{name}
         		</h3>
@@ -44,5 +58,6 @@ export default function TeamMemberCard({
 				</div>
 			</CardContent>
 		</Card>
+		
 	);
 }
