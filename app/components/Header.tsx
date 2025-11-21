@@ -28,7 +28,7 @@ export default function Header() {
 				<nav className="flex flex-col space-y-4 py-4 px-6">
 					<Link href="#team" className="hover:text-gray-300" onClick={() => setIsMenuOpen(false)}>О команде</Link>
 					<Link href="#projects" className="hover:text-gray-300" onClick={() => setIsMenuOpen(false)}>Проекты</Link>
-					<Link href="#contact" className="hover:text-gray-300" onClick={() => setIsMenuOpen(false)}>Контакты</Link>
+					<Link href="#contacts" className="hover:text-gray-300" onClick={() => setIsMenuOpen(false)}>Контакты</Link>
 				</nav>
 			</div>
 		</header>
