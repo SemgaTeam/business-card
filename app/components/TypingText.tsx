@@ -1,6 +1,6 @@
 'use client';
 
-import { easeIn, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -18,17 +18,16 @@ export default function TypingText(
   	const words = content.split(' ');
 
 	const wordVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * (1 / speed),
-        duration: 0.3,
-		ease: "easeOut"
-      	}
-    })
-  	};	
+		hidden: { opacity: 0 },
+		visible: (custom: number) => ({
+		opacity: 1,
+		transition: {
+			delay: custom * (6 / speed),
+			staggerChildren: 1 / speed,
+			when: "beforeChildren" as const
+		}
+		})
+	} as const;
 
   	const ref = useRef(null);
 	const isInView = useInView(ref, { once: false });
