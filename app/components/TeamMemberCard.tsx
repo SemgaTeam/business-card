@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 
 interface TeamMemberProps {
@@ -32,7 +32,7 @@ export default function TeamMemberCard({
 				className="absolute inset-0"
 				style={{
 				backdropFilter: 'blur(8px)',
-				backgroundColor: 'rgba(0,0,0,0.5)',
+				backgroundColor: 'rgba(0,0,0,0.8)',
 				}}
 			/>
 
