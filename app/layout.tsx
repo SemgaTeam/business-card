@@ -7,6 +7,9 @@ import "./globals.css"
  export const metadata: Metadata = {
   title: "Semga Team",
   description: "Пишем сайты для вас, быстро и без головной боли, пап, мам и посредников.",
+   icons: {
+    icon: "/favicon.ico",
+  },
  };
 
  export default function RootLayout(
