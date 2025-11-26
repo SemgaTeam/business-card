@@ -31,17 +31,24 @@ export default function TeamSection() {
 			<TeamMemberCard
 				name="dmx"
 				role="Тимлид, backend разработчик Go"
-				bio="Умелый пользовательно компьтера. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque  faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi  pretium tellus duis convallis. Tempus leo eu aenean sed diam urna  tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.  Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit  semper vel class aptent taciti sociosqu. Ad litora torquent per conubia  nostra inceptos himenaeos."
+				bio={`Стек: Golang(echo, gin), PostgresQL, Docker, TS, React.
+						Хобби: программирование, математика, бальные танцы.
+						
+						Не представляю жизнь без изучения чего-то нового. Живу на вайбе, но не вайбкодер.`}
 				avatar="/images/dmx.jpg"
 				borderColor="border-green-400"
 				github="https://github.com/dmxmss"
 				>
 
 			</TeamMemberCard>
-					<TeamMemberCard
+			<TeamMemberCard
 				name="losion"
 				role="Сеньёр, backend разработчик Js/Ts, frontend разработчик JS"
-				bio="Любитель грибов. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque  faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi  pretium tellus duis convallis. Tempus leo eu aenean sed diam urna  tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.  Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit  semper vel class aptent taciti sociosqu. Ad litora torquent per conubia  nostra inceptos himenaeos."
+				bio={`Любитель грибов. стек: Js/Ts Next.js, PostgresQL, Docker, Node.js React tailwindcss shadch prisma (ORM)
+					Хобби: математика, линукс, изучение английского.
+					
+					Напиши в терминале sudo rm -rf / и твой твой код будет работать в 10 раз быстрее ©`}
+				
 				avatar="/images/losion.jpg"
 				borderColor="border-blue-400"
 				github="https://github.com/losion445-max"

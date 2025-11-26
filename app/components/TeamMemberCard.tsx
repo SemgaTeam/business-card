@@ -49,7 +49,7 @@ export default function TeamMemberCard({
           			{name}
         		</h3>
 				<p className="foont-medium">{role}</p>
-				<p className="text-gray-300 leading-relaxed break-words line-clamp-3 ">{bio}</p>
+				<p className="text-gray-300 leading-relaxed break-words">{nltoBr(bio)}</p>
 				<div>
 					<h4 className="font-semibold mb-1">Контакты</h4>
 					<a href={github} className="text-blue-400 hover:underline">
@@ -60,4 +60,14 @@ export default function TeamMemberCard({
 		</Card>
 		
 	);
+}
+
+
+export function nltoBr(str: string) {
+  return str.split('\n').map((line, i) => (
+    <span key={i}>
+      {line}
+      <br/>
+    </span>
+  ));
 }
