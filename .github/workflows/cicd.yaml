@@ -1,0 +1,55 @@
+name: Deploy
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker image
+        run: |
+          docker build -t landing:latest .
+
+      - name: Save image to tar and compress it
+        run: |
+          docker save landing:latest -o landing.tar
+          gzip landing.tar
+
+      - name: Upload image to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          source: "landing.tar.gz"
+          target: "~/deploy/landing.tar.gz"
+
+      - name: Run remote deploy script
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            docker ps | grep registry || \
+              docker run -d -p 5000:5000 --restart always --name registry registry:3
+
+            gunzip ~/deploy/landing.tar.gz
+            docker load -i ~/deploy/landing.tar
+            docker tag landing:latest localhost:5000/landing:latest
+            docker push localhost:5000/landing:latest
+
+            cd ~/services/landing
+            docker compose pull
+            docker compose down
+            docker compose up -d
+
