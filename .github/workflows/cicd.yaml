@@ -9,6 +9,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
       - name: Build Docker image
         run: docker build -t landing:latest .
 
@@ -30,6 +36,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "artifacts/landing.tar.gz"
           target: "/home/${{ secrets.SERVER_USER }}/deploy/"
+
       - name: Run remote deploy script
         uses: appleboy/ssh-action@v1.0.3
         with:
