@@ -27,6 +27,7 @@ jobs:
         run: |
           gzip -9 artifacts/landing.tar
           ls -lh artifacts
+          chmod 644 artifacts/landing.tar.gz
 
       - name: Upload image to server
         uses: appleboy/scp-action@v0.1.7
