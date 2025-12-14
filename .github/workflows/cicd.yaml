@@ -46,6 +46,6 @@ jobs:
           script: |
             set -euo pipefail
             cd ~/services/landing 
-            IMAGE_TAG=${{ steps.vars.outputs.IMAGE_TAG }}
+            export IMAGE_TAG=${{ steps.vars.outputs.IMAGE_TAG }}
             docker compose pull
             docker compose up -d
