@@ -19,7 +19,7 @@ export default function ContactSection() {
 						</div>
 						<div className="flex items-center gap-2">
 							<Github className='w-5 h-5'></Github>
-						<span>https://github.com/SemgaTeam</span>
+						<span><a href='https://github.com/SemgaTeam'>github.com/SemgaTeam</a></span>
 					</div>
 				</div>
 		</div>
