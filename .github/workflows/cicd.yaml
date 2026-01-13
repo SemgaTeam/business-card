@@ -36,16 +36,3 @@ jobs:
             -t ghcr.io/${{ steps.vars.outputs.OWNER_LOWER }}/landing:latest \
             --push \
             .
-
-      - name: Deploy on server
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          script: |
-            set -euo pipefail
-            cd ~/services/landing 
-            export IMAGE_TAG=${{ steps.vars.outputs.IMAGE_TAG }}
-            docker compose pull
-            docker compose up -d
