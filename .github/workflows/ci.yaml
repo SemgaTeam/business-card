@@ -58,4 +58,4 @@ jobs:
           git config user.email "github-actions@github.com"
           git add .
           git commit -m "GITHUB ACTIONS(landing): bump image tag to ${{ steps.vars.outputs.IMAGE_TAG }}"
-          pit push
+          git push
