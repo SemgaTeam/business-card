@@ -1,0 +1,26 @@
+name: Test Gitops CI
+
+on:
+  push:
+    branches: ["test/gitops"]
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout gitops repo
+        uses: actions/checkout@v4
+        with:
+          repository: SemgaTeam/configs
+          ssh-key: ${{ secrets.GITOPS_DEPLOY_KEY }}
+          path: gitops
+
+      - name: Update image tag
+        run: |
+          cd gitops
+          yq -i '
+            .image.tag = "ecc00db"
+          ' apps/landing/prod/values.yaml
+
+          cat apps/landing/prod/values.yaml
