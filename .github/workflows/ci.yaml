@@ -1,11 +1,11 @@
-name: Deploy
+name: Build & Update GitOps
 
 on:
   push:
     branches: ["main"]
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -47,6 +47,15 @@ jobs:
       - name: Update image tag
         run: |
           cd gitops
-          yq -iy '
+          yq -i '
             .image.tag = "${{ steps.vars.outputs.IMAGE_TAG }}"
           ' apps/landing/prod/values.yaml
+
+      - name: Commit & Push
+        run: |
+          cd gitops
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "GITHUB ACTIONS(landing): bump image tag to ${{ steps.vars.outputs.IMAGE_TAG }}"
+          pit push
