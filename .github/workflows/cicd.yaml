@@ -36,3 +36,17 @@ jobs:
             -t ghcr.io/${{ steps.vars.outputs.OWNER_LOWER }}/landing:latest \
             --push \
             .
+
+      - name: Checkout gitops repo
+        uses: actions/checkout@v4
+        with:
+          repository: SemgaTeam/configs
+          ssh-key: ${{ secrets.GITOPS_DEPLOY_KEY }}
+          path: gitops
+
+      - name: Update image tag
+        run: |
+          cd gitops
+          yq -iy '
+            .image.tag = "${{ steps.vars.outputs.IMAGE_TAG }}"
+          ' apps/landing/prod/values.yaml
