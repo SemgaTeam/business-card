@@ -30,8 +30,8 @@ export default function TeamSection() {
 
 			<TeamMemberCard
 				name="dmx"
-				role="Тимлид, backend разработчик Go"
-				bio={`Стек: Golang(echo, gin), PostgresQL, Docker, TS, React.
+				role="Тимлид, backend разработчик Go, DevOps"
+				bio={`Стек: Golang, PostgresQL, Docker, Kubernetes.
 						Хобби: программирование, математика, бальные танцы.
 						
 						Не представляю жизнь без изучения чего-то нового. Живу на вайбе, но не вайбкодер.`}
