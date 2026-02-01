@@ -53,7 +53,19 @@ export default function TeamSection() {
 				borderColor="border-blue-400"
 				github="https://github.com/losion445-max"
 			></TeamMemberCard>
-
+			
+			<TeamMemberCard
+				name="jisys"
+				role="Стажер, backend js developer"
+				bio={`Стек: python, c++, c, java, php, assembler(???). да, это все я мог бы знать на неплохом уровне ,если бы не играл в my summer car. на деле html, css, javascript(в процессе)
+					Хобби: пайка, автомобили, армрестлинг.
+					
+					Если вы уделите время изучению мат. ожидания, то уверяю, сможете зарабатывать не меньше Олега Шепса(чувак из битвы экстрасенсов)!`}
+				
+				avatar="/images/jisys.jpg"
+				borderColor="border-red-400"
+				github="https://github.com/prorok3388"
+			></TeamMemberCard>
 			</div>
 			</div>
 		</AnimatedSection>
