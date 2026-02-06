@@ -12,7 +12,7 @@ export default function TeamSection() {
         <div className="flex flex-col lg:flex-row lg:justify-between lg:space-x-12 items-center mb-16">
           <div className="lg:w-1/2">
             <Image
-              src="/images/team.jpg"
+              src="/images/dreamTeame.png"
               width={600}
               height={400}
               alt="Команда Semga Team"
