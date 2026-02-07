@@ -40,10 +40,10 @@ export default function TeamSection() {
           <TeamMemberCard
             name="losion"
             role="Сеньёр, backend разработчик Js/Ts, frontend разработчик JS"
-            bio={`Любитель грибов. стек: Js/Ts Next.js, PostgresQL, Docker, Node.js React tailwindcss shadch prisma (ORM)
+            bio={`Любитель грибов. Cтек: Js/Ts Next.js, PostgresQL, Docker, Node.js React tailwindcss shadch prisma (ORM)
 					Хобби: математика, линукс, изучение английского.
 					
-					Напиши в терминале sudo rm -rf / и твой твой код будет работать в 10 раз быстрее ©`}
+					Напиши в терминале sudo rm -rf / и твой код будет работать в 10 раз быстрее ©`}
             avatar="/images/losion.jpg"
             borderColor="border-blue-400"
             github="https://github.com/losion445-max"></TeamMemberCard>
@@ -51,7 +51,7 @@ export default function TeamSection() {
           <TeamMemberCard
             name="jisys"
             role="Стажер, backend js developer"
-            bio={`Стек: python, c++, c, java, php, assembler(???). да, это все я мог бы знать на неплохом уровне ,если бы не играл в my summer car. на деле html, css, javascript(в процессе)
+            bio={`Стек: python, c++, c, java, php, assembler(???). Да, это все я мог бы знать на неплохом уровне, если бы не играл в my summer car. На деле html, css, javascript(в процессе)
 					Хобби: пайка, автомобили, армрестлинг.
 					
 					Если вы уделите время изучению мат. ожидания, то уверяю, сможете зарабатывать не меньше Олега Шепса(чувак из битвы экстрасенсов)!`}
@@ -66,7 +66,7 @@ export default function TeamSection() {
 					Хобби: плавание, футбол, качалка, путешествия.
 					`}
             avatar="/images/sheva.jpg"
-            borderColor="border-green-400"
+            borderColor="border-yellow-400"
             github="https://github.com/Sheva-dima"></TeamMemberCard>
         </div>
       </div>
