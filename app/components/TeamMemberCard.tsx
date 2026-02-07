@@ -26,12 +26,12 @@ export default function TeamMemberCard({
 			style={{
 			backgroundImage: `url(${avatar})`,
 			backgroundSize: 'cover',
-			backgroundPosition: 'center',
+			backgroundPosition: '20px -600px',
 		}}>
 			  <div 
 				className="absolute inset-0"
 				style={{
-				backdropFilter: 'blur(8px)',
+				backdropFilter: 'blur(10px)',
 				backgroundColor: 'rgba(0,0,0,0.8)',
 				}}
 			/>
