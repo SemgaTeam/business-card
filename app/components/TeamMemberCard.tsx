@@ -47,7 +47,7 @@ export default function TeamMemberCard({
       </div>
       <CardContent className="space-y-4 relative z-10">
         <h3 className="text-xl md:text-2xl font-boldmt-4">{name}</h3>
-        <p className="foont-medium">{role}</p>
+        <p className="font-medium">{role}</p>
         <p className="text-gray-300 leading-relaxed break-words">
           {nltoBr(bio)}
         </p>
