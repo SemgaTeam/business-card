@@ -35,10 +35,10 @@ export default function ProjectsSection() {
 		<AnimatedSection id="projects" className="py-16 px-6">
 			<div className="container mx-auto">
 				<h2 className="text-3xl font-bold text-center mb-12">Проекты</h2>
-				<div className="space-y-4">
+				<div>
 					{projects.map((project, index) => (
 						<ProjectCard
-							key={project.name}
+							key={project.name + "-" + index}
 							name={project.name}
 							description={project.description}
 							demo={project.demo}

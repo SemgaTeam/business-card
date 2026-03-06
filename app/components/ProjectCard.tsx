@@ -25,7 +25,7 @@ export default function ProjectCard({
 	return (
 		<Card
 			onClick={onClick}
-			className={`border border-gray-700 overflow-hidden cursor-pointer flex flex-col md:flex-row gap-4 transition-all duration-500 ease-in-out ${
+			className={`last:border-b-2 border-t-2 border-solid border-gray-700 overflow-hidden cursor-pointer flex flex-col md:flex-row gap-4 transition-all duration-500 ease-in-out ${
 				isActive ? "p-6 max-h-[900px]" : "p-4 max-h-20"
 			}`}
 		>
