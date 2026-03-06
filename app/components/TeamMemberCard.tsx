@@ -22,7 +22,7 @@ export default function TeamMemberCard({
 }: TeamMemberProps) {
   return (
     <Card
-      className={`border-2 ${borderColor} p-6 flex flex-col relative md:flex-row gap-6`}
+      className={`rounded-xl border-2 ${borderColor} p-6 flex flex-col relative md:flex-row gap-6`}
       style={{
         backgroundImage: `url(${avatar})`,
         backgroundSize: "cover",
@@ -37,7 +37,7 @@ export default function TeamMemberCard({
         }}
       />
 
-      <div className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden flex-shrink-0 relative z-10">
+      <div className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden shrink-0 relative z-10">
         <Image
           src={avatar}
           width={200}
@@ -48,7 +48,7 @@ export default function TeamMemberCard({
       <CardContent className="space-y-4 relative z-10">
         <h3 className="text-xl md:text-2xl font-boldmt-4">{name}</h3>
         <p className="font-medium">{role}</p>
-        <p className="text-gray-300 leading-relaxed break-words">
+        <p className="text-gray-300 leading-relaxed wrap-break-word">
           {nltoBr(bio)}
         </p>
         <div>
