@@ -36,7 +36,7 @@ export default function ProjectCard({
 						isActive ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
 					} overflow-hidden`}
 				>
-					<p className="mb-4 text-gray-300 leading-relaxed">{description}</p>
+					<p className="mb-4 text-gray-300 leading-relaxed" dangerouslySetInnerHTML={{ __html: description}}></p>
 					<div className="space-y-2 text-sm">
 						<p>
 							<a href={demo} className="text-blue-400 hover:underline">
