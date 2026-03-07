@@ -72,7 +72,7 @@ export default function ProjectsSection() {
               github={project.github}
               image={project.image}
               isActive={activeIndex === index}
-              onClick={() => setActiveIndex(index)}
+              onClick={()  => setActiveIndex(index)}
             />
           ))}
         </div>
