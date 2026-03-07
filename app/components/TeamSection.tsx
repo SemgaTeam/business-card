@@ -16,7 +16,8 @@ export default function TeamSection() {
               width={600}
               height={400}
               alt="Команда Semga Team"
-              className="rounded-4xl object-cover w-full h-auto"></Image>
+              className="rounded-4xl object-cover w-full h-auto"
+            ></Image>
           </div>
           <div className="lg:w-1/2 ">
             <p className="text-lg leading-relaxed">
@@ -36,7 +37,8 @@ export default function TeamSection() {
 						Не представляю жизнь без изучения чего-то нового. Живу на вайбе, но не вайбкодер.`}
             avatar="/images/dmx.jpg"
             borderColor="border-green-400"
-            github="https://github.com/dmxmss"></TeamMemberCard>
+            github="https://github.com/dmxmss"
+          ></TeamMemberCard>
           <TeamMemberCard
             name="losion"
             role="Сеньёр, backend разработчик Js/Ts, frontend разработчик JS"
@@ -46,7 +48,8 @@ export default function TeamSection() {
 					Напиши в терминале sudo rm -rf / и твой твой код будет работать в 10 раз быстрее ©`}
             avatar="/images/losion.jpg"
             borderColor="border-blue-400"
-            github="https://github.com/losion445-max"></TeamMemberCard>
+            github="https://github.com/losion445-max"
+          ></TeamMemberCard>
 
           <TeamMemberCard
             name="jisys"
@@ -57,7 +60,8 @@ export default function TeamSection() {
 					Если вы уделите время изучению мат. ожидания, то уверяю, сможете зарабатывать не меньше Олега Шепса(чувак из битвы экстрасенсов)!`}
             avatar="/images/jisys.jpg"
             borderColor="border-red-400"
-            github="https://github.com/prorok3388"></TeamMemberCard>
+            github="https://github.com/prorok3388"
+          ></TeamMemberCard>
 
           <TeamMemberCard
             name="sheva"
@@ -67,7 +71,8 @@ export default function TeamSection() {
 					`}
             avatar="/images/sheva.jpg"
             borderColor="border-green-400"
-            github="https://github.com/Sheva-dima"></TeamMemberCard>
+            github="https://github.com/Sheva-dima"
+          ></TeamMemberCard>
         </div>
       </div>
     </AnimatedSection>

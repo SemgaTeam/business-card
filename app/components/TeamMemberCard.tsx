@@ -27,7 +27,8 @@ export default function TeamMemberCard({
         backgroundImage: `url(${avatar})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-      }}>
+      }}
+    >
       <div
         className="absolute inset-0"
         style={{
@@ -43,7 +44,8 @@ export default function TeamMemberCard({
           width={200}
           height={200}
           alt={name}
-          className="w-full h-full object-cover"></Image>
+          className="w-full h-full object-cover"
+        ></Image>
       </div>
       <CardContent className="space-y-4 relative z-10">
         <h3 className="text-xl md:text-2xl font-boldmt-4">{name}</h3>
