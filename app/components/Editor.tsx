@@ -12,7 +12,7 @@ type EditorProps = {
     color?: string;
 };
 
-export default function Editor({ fileName, language, code, speed = 40, color = "#d946ef" }: EditorProps) {
+export default function Editor({ fileName, language, code, speed = 80, color = "#d946ef" }: EditorProps) {
     const [displayedCode, setDisplayedCode] = useState("");
     const scrollRef = useRef<HTMLDivElement>(null);
 
