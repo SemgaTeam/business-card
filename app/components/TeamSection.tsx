@@ -25,7 +25,7 @@ export default function TeamSection() {
               Мы - группа исследователей из ДГТУ. Нас объединяет желание делать
               качественные и красивые бизнес проекты.
             </p>
-          <GitHubCodePage/>
+            <GitHubCodePage />
           </div>
         </div>
 
