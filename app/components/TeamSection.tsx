@@ -3,20 +3,21 @@
 import Image from "next/image";
 import TeamMemberCard from "./TeamMemberCard";
 import AnimatedSection from "../AnimatedSection";
+import GitHubCodePage from "./GithubCodePage";
 
 export default function TeamSection() {
   return (
-    <AnimatedSection id="team" className="py-16 px-6">
+    <AnimatedSection id="team" className="px-6 py-16">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">Наша комманда</h2>
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:space-x-12 items-center mb-16">
+        <h2 className="mb-12 text-3xl font-bold text-center">Наша комманда</h2>
+        <div className="flex flex-col items-center mb-16 lg:flex-row lg:justify-between lg:space-x-12">
           <div className="lg:w-1/2">
             <Image
               src="/images/dreamTeame.png"
               width={600}
               height={400}
               alt="Команда Semga Team"
-              className="rounded-4xl object-cover w-full h-auto"
+              className="object-cover w-full h-auto rounded-4xl"
             ></Image>
           </div>
           <div className="lg:w-1/2 ">
@@ -24,6 +25,7 @@ export default function TeamSection() {
               Мы - группа исследователей из ДГТУ. Нас объединяет желание делать
               качественные и красивые бизнес проекты.
             </p>
+            <GitHubCodePage />
           </div>
         </div>
 

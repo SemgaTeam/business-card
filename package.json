@@ -23,6 +23,7 @@
     "next": "^16.1.1",
     "react": "19.2.0",
     "react-dom": "19.2.0",
+    "react-syntax-highlighter": "^16.1.1",
     "shadcn": "^3.5.0",
     "tailwind-merge": "^3.4.0"
   },
@@ -32,6 +33,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "autoprefixer": "^10.4.22",
     "baseline-browser-mapping": "^2.10.0",
     "eslint": "^9",
