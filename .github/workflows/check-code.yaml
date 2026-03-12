@@ -1,10 +1,11 @@
 name: Check Code On Pull Request
 
 on:
-  paths-ignore:
-    - ".github/**"
-    - "public/**"
   pull_request:
+    paths-ignore:
+      - ".github/**"
+      - "public/**"
+
     types: [opened, reopened]
 
 jobs:
