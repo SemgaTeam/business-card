@@ -4,7 +4,6 @@ on:
   push:
     paths-ignore:
       - ".github/**"
-      - "public/**"
     branches: ["main"]
 
 jobs:
